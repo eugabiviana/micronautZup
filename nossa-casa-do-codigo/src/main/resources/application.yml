@@ -1,0 +1,12 @@
+mmicronaut:
+  application:
+    name: nossaCasaDoCodigo
+datasources:
+  default:
+    url: jdbc:mysql://localhost:3306/nossa_casa_codigo?createDatabaseIfNotExist=true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: medusa25
+    schema-generate: CREATE_DROP
+    dialect: MYSQL
+jpa.default.properties.hibernate.hbm2ddl.auto: update
