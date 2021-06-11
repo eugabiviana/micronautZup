@@ -13,7 +13,7 @@ import javax.validation.Valid
 
 @Validated
 @Controller("/autores")
-class CadastraAutorController (@Inject val autorRepository: AutorRepository) {
+class CadastraAutorController (@Inject val autorRepository: AutorRepository){
 
     @Post
     fun cadastra(@Body @Valid request: NovoAutorRequest) : HttpResponse<Any>{
