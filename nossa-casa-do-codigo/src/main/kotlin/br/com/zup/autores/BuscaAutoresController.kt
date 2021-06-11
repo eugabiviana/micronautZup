@@ -25,7 +25,17 @@ class BuscaAutoresController(val autorRepository: AutorRepository) {
             return HttpResponse.ok(resposta)
         }
 
-        val possivelAutor = autorRepository.findByEmail(email)
+//        val possivelAutor = autorRepository.findByEmail(email)
+//        if (possivelAutor.isEmpty){
+//            return HttpResponse.notFound()
+//        }
+//
+//        val autor = possivelAutor.get()
+//        return HttpResponse.ok(DetalhesDoAutorResponse(autor))
+//
+//    }
+
+        val possivelAutor =  autorRepository.buscaPorEmail(email)
         if (possivelAutor.isEmpty){
             return HttpResponse.notFound()
         }
@@ -34,5 +44,4 @@ class BuscaAutoresController(val autorRepository: AutorRepository) {
         return HttpResponse.ok(DetalhesDoAutorResponse(autor))
 
     }
-
 }
