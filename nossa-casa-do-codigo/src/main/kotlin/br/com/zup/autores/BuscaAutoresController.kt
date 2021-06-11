@@ -11,7 +11,7 @@ import javax.transaction.Transactional
 class BuscaAutoresController(val autorRepository: AutorRepository) {
 
     @Get
-   // @Transactional -> o instrutor usou no vídeo, mas no meu código travou, por isso comentei a annotation.
+   @Transactional //-> o instrutor usou no vídeo, mas no meu código travou, por isso comentei a annotation.
     fun lista(@QueryValue(defaultValue = "") email: String): HttpResponse<Any> {
 
         if (email.isBlank()){
