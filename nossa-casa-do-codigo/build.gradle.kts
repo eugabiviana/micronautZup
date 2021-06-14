@@ -50,6 +50,7 @@ dependencies {
 //JPA
     runtime("io.micronaut.sql:micronaut-jdbc-hikari") //mesmo tubo de conexões que o spring usa por padrão
     implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+    implementation("io.micronaut.xml:micronaut-jackson-xml")
 }
 
 
