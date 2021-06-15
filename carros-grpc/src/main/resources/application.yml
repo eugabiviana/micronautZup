@@ -1,12 +1,16 @@
 micronaut:
   application:
-    name: nossaCasaDoCodigo
+    name: carrosGrpc
 datasources:
   default:
-    url: jdbc:mysql://localhost:3306/nossa_casa_codigo?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/carroGRPC?createDatabaseIfNotExist=true
     driverClassName: com.mysql.cj.jdbc.Driver
     username: root
     password: medusa25
     schema-generate: CREATE_DROP
     dialect: MYSQL
+
+#JPA
 jpa.default.properties.hibernate.hbm2ddl.auto: update
+jpa.default.properties.hibernate.show_sql: true
+jpa.default.properties.hibernate.format_sql: true
